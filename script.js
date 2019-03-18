@@ -7,7 +7,6 @@ window.onload = function() {
   }
   document.getElementById("add").onclick = function() {
     var note = document.getElementById("note").value;
-
     var list = {};
     list.text = note;
     list.check = false;
@@ -20,14 +19,19 @@ window.onload = function() {
 
   function out(){
     var out = "";
+    var div = "";
     for(var key in all_list){
       if(all_list[key].check == true){
-        out += "<input type = 'checkbox' checked>"
+        div += "<input type = 'checkbox' checked>"
       }else{
-        out += "<input type = 'checkbox' >"
+        div += "<input type = 'checkbox' >"
       }
-      out += all_list[key].text + '<br>'
+
+      div = document.createElement('div');
+      div.innerHTML = all_list[key].text;
+      document.body.appendChild(div);
+      // out += all_list[key].text + '<br>'
     }
-    document.getElementById("show_notes").innerHTML = out;
+    // document.getElementById("show_notes").innerHTML = out;
   }
 }
