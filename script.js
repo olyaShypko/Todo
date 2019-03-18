@@ -26,12 +26,12 @@ window.onload = function() {
       }else{
         div += "<input type = 'checkbox' >"
       }
-
       div = document.createElement('div');
       div.innerHTML = all_list[key].text;
-      document.body.appendChild(div);
+
       // out += all_list[key].text + '<br>'
     }
+    document.body.appendChild(div);
     // document.getElementById("show_notes").innerHTML = out;
   }
 }
