@@ -1,5 +1,5 @@
 window.onload = function() {
-
+ // Part 1
   // var all_list = [];
   // if(localStorage.getItem('text') !=undefined){
   //   all_list = JSON.parse(localStorage.getItem('text'));
@@ -34,6 +34,9 @@ window.onload = function() {
   //   document.body.appendChild(div);
   //   // document.getElementById("show_notes").innerHTML = out;
   // }
+
+
+  // Part 2
  var add = document.getElementById("add");
     add.onclick = function(){
       var gen_windiw = document.createElement('div');
@@ -51,10 +54,6 @@ window.onload = function() {
       var span = document.createElement("span");
       span.classList.add("close");
       gen_windiw.appendChild(span);
-    } 
-var span =  document.getElementsByTag(span); 
-    span.onclick = function() {
-         span.parentNode.remove();
-
     }
+
 }
